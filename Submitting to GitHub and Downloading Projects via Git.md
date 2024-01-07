@@ -26,7 +26,8 @@ git commit -m "Initial commit"
 
 5. Associate the project's Git with the GitHub repository:
 ```shell
-git remote add origin git@github.com:tallblacks/nzshop.cn.git
+git remote add origin https://github.com/tallblacks/nzshop.cn.git
+# OR git remote add origin git@github.com:tallblacks/nzshop.cn.git
 git remote -v
 
 git remote set-url origin ... // Update
@@ -36,12 +37,12 @@ git remote remove origin // Delete
 7. Check the branch name. If it is `master`, change it to `main`:
 ```shell
 git branch
-git branch -m master main
+git branch -M main
+# OR git branch -m master main
 ```
 
 8. Code upload failed because README.md was added on the website. Merge first and then upload:
 ```shell
-git push -u origin main
 git pull origin main
 git push -u origin main
 ```
